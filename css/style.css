@@ -18,8 +18,13 @@ h1, h2, h3 {
 }
 
 .navigation {
+    /* display: flex; */
     margin: 0;
     padding: 10px 0;
+    row-gap: 40px;
+}
+
+.navigation div {
     background-color: #2a3644;
 }
 
@@ -39,6 +44,6 @@ h1, h2, h3 {
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
 }
 
