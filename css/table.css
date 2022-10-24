@@ -1,7 +1,38 @@
 table {
+    width: 100%;
+    border-collapse: collapse;
     border-radius: 3px;
 }
 
-table th {
+table thead tr {
+    overflow: hidden;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
     background-color: #2a3644;
+}
+
+table th {
+    padding: 15px 0;
+    border: 1px solid #3f4852;;
+}
+
+table tbody tr {
+    font-size: 16px;
+    color: #2a3644;
+    background-color: #f2f2f2;
+    border-radius: 3px;
+}
+
+table td {
+    padding: 15px;
+    border: 1px solid #c0c1c2;
+}
+
+table tr:nth-child(2n + 2) td {
+    background-color: #e8e8e8;
+}
+
+table tr:hover td{
+    background-color: #c0c1c2;
 }
