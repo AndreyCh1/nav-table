@@ -13,8 +13,13 @@
 <body>
     <div class="wrapper">
         <h1>1. Навігація</h1>
+        <div class="burger_menu" id="burger">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </div>
         <nav class="navigation menu">
-            <ul>
+            <ul class="menu_border">
                 <li><a href="#">Ковбаса</a>
                     <ul class="submenu">
                         <li><a href="#">Ліверна</a></li>
@@ -50,7 +55,7 @@
             </ul>
         </nav>
         <nav class="table_menu menu">
-            <ul>
+            <ul class="menu_border">
                 <li><a href="#">Ноутбук</a></li>
                 <li><a href="#">Телефон</a></li>
                 <li><a href="#">Холодильник</a>
@@ -58,11 +63,18 @@
                         <li><a href="#">Морозильна камера</a></li>
                         <li><a href="#">2-х камерні</a></li>
                         <li><a href="#">4-х камерні</a>
-                            <ul class="submenu">
+                            <ul class="second_submenu submenu">
                                 <li><a href="#">Суха заморозка</a></li>
                                 <li><a href="#">Мокра заморозка</a></li>
                                 <li><a href="#">Середня заморозка</a></li>
-                                <li><a href="#">Дешеві</a></li>
+                                <li><a href="#">Дешеві</a>
+                                    <ul class="third_submenu submenu">
+                                        <li><a href="#">Саморобні</a></li>
+                                        <li><a href="#">Неробочі</a></li>
+                                        <li><a href="#">Для дітей</a></li>
+                                        <li><a href="#">Без дверей</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                         <li><a href="#">6-ти камерні</a></li>
@@ -72,9 +84,9 @@
                 <li><a href="#">Різне</a></li>
             </ul>
         </nav>
-        <nav class="navigation menu">
-            <ul>
-                <li><a href="#">Головна</a></li>
+        <nav class="navigation menu flex_between">
+            <ul class="menu_border">
+                <li><a href="#" class="navigation__a--icon navigation__a flex_between__a--home_icon">Головна</a></li>
                 <li><a href="#">Про село</a>
                     <ul class="submenu">
                         <li><a href="#">Оформлення паїв</a></li>
@@ -84,7 +96,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Наші послуги</a>
-                    <ul class="submenu">
+                    <ul class="submenu double_submenu">
                         <li><a href="#">Видоїти корову</a></li>
                         <li><a href="#">Випасти свиню</a></li>
                         <li><a href="#">Принести води</a></li>
@@ -231,6 +243,18 @@
             </ul>
         </div>
     </div>
+    <div id="background"></div>
+    <script>
+        function top_menu_toggle() {
+            burger.classList.toggle("burger_menu_open")
+            topMenu.classList.toggle("top_menu_open")
+            background.classList.toggle("background_open")
+            body.classList.toggle("body_no_scroll")
+            footerCopy.classList.toggle("footer-copy")
+        }
+        burger.onclick = top_menu_toggle
+        background.onclick = top_menu_toggle
+    </script>
 </body>
 
 </html>
