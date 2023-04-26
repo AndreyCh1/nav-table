@@ -13,47 +13,49 @@
 <body>
     <div class="wrapper">
         <h1>1. Навігація</h1>
-        <div class="burger_menu" id="burger">
-            <span class="top"></span>
-            <span class="middle"></span>
-            <span class="bottom"></span>
+        <div class="navigation menu">
+            <div class="burger_bottom" id="burger">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+            </div>
+            <nav class="navigation_menu" id="burger_menu">
+                <ul class="border_menu">
+                    <li><a href="#">Ковбаса</a>
+                        <ul class="submenu">
+                            <li><a href="#">Ліверна</a></li>
+                            <li><a href="#">Домашні ковбаси</a></li>
+                            <li><a href="#">Мисливська</a></li>
+                            <li><a href="#">Салямі</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Салатік</a>
+                        <ul class="submenu">
+                            <li><a href="#">Олів’є</a></li>
+                            <li><a href="#">Мімоза</a></li>
+                            <li><a href="#">Грецький з горіхами</a></li>
+                            <li><a href="#">Фруктовий</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Крабові палочки</a>
+                        <ul class="submenu">
+                            <li><a href="#">Водяний світ</a></li>
+                            <li><a href="#">На вагу</a></li>
+                            <li><a href="#">Скажений краб</a></li>
+                            <li><a href="#">Крабстер</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Молоко</a>
+                        <ul class="submenu">
+                            <li><a href="#">Корівка</a></li>
+                            <li><a href="#">Селянське</a></li>
+                            <li><a href="#">Віньковецьке</a></li>
+                            <li><a href="#">Парне 99%</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav class="navigation menu">
-            <ul class="menu_border">
-                <li><a href="#">Ковбаса</a>
-                    <ul class="submenu">
-                        <li><a href="#">Ліверна</a></li>
-                        <li><a href="#">Домашні ковбаси</a></li>
-                        <li><a href="#">Мисливська</a></li>
-                        <li><a href="#">Салямі</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Салатік</a>
-                    <ul class="submenu">
-                        <li><a href="#">Олів’є</a></li>
-                        <li><a href="#">Мімоза</a></li>
-                        <li><a href="#">Грецький з горіхами</a></li>
-                        <li><a href="#">Фруктовий</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Крабові палочки</a>
-                    <ul class="submenu">
-                        <li><a href="#">Водяний світ</a></li>
-                        <li><a href="#">На вагу</a></li>
-                        <li><a href="#">Скажений краб</a></li>
-                        <li><a href="#">Крабстер</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Молоко</a>
-                    <ul class="submenu">
-                        <li><a href="#">Корівка</a></li>
-                        <li><a href="#">Селянське</a></li>
-                        <li><a href="#">Віньковецьке</a></li>
-                        <li><a href="#">Парне 99%</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
         <nav class="table_menu menu">
             <ul class="menu_border">
                 <li><a href="#">Ноутбук</a></li>
@@ -245,15 +247,14 @@
     </div>
     <div id="background"></div>
     <script>
-        function top_menu_toggle() {
-            burger.classList.toggle("burger_menu_open")
-            topMenu.classList.toggle("top_menu_open")
+        function menu_border_toggle() {
+            burger.classList.toggle("burger_bottom_open")
+            burger_menu.classList.toggle("burger_menu")
             background.classList.toggle("background_open")
             body.classList.toggle("body_no_scroll")
-            footerCopy.classList.toggle("footer-copy")
         }
-        burger.onclick = top_menu_toggle
-        background.onclick = top_menu_toggle
+        burger.onclick = menu_border_toggle
+        background.onclick = menu_border_toggle
     </script>
 </body>
 
